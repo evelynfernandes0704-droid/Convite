@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gothic-black: #080507;
+    --gothic-dark: #120b10;
+    --gothic-card: #181115;
+    --gothic-wine: #560d1e;
+    --gothic-ruby: #7f162c;
+    --gothic-gold: #c5a059;
+    --gothic-gold-light: #e8d08d;
+    --gothic-text: #eae3dc;
+    --gothic-muted: #a6988f;
+    --gothic-border: rgba(197, 160, 89, 0.25);
+  }
+
+  body {
+    background-color: var(--gothic-black);
+    color: var(--gothic-text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* Custom gothic utilities */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Pinyon Script', cursive;
+}
+
+/* Antique Gold Gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f9e8a2 0%, #d4af37 50%, #9e7b23 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Wine Red Gradient text */
+.text-wine-gradient {
+  background: linear-gradient(135deg, #ff7e93 0%, #c41e3a 50%, #630517 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ornate Gothic Borders */
+.gothic-border {
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(197, 160, 89, 0.03);
+}
+
+.gothic-border-glow {
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  box-shadow: 0 0 25px rgba(127, 22, 44, 0.35), 0 0 10px rgba(197, 160, 89, 0.2);
+}
+
+/* Candle flame glow effect */
+@keyframes candleFlicker {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 0 8px rgba(255, 170, 50, 0.8));
+  }
+  25% {
+    opacity: 0.75;
+    transform: scale(0.97) translateY(-1px) rotate(-1deg);
+    filter: drop-shadow(0 0 6px rgba(255, 150, 30, 0.7));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03) translateY(1px) rotate(1deg);
+    filter: drop-shadow(0 0 12px rgba(255, 190, 70, 0.9));
+  }
+  75% {
+    opacity: 0.82;
+    transform: scale(0.98) translateY(0) rotate(0);
+    filter: drop-shadow(0 0 7px rgba(255, 160, 40, 0.75));
+  }
+}
+
+.candle-glow {
+  animation: candleFlicker 3s infinite ease-in-out;
+}
+
+/* Gothic arch decorative corner */
+.gothic-card-bg {
+  background: radial-gradient(circle at 50% 0%, rgba(86, 13, 30, 0.22) 0%, rgba(18, 11, 16, 0.95) 75%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090507;
+}
+::-webkit-scrollbar-thumb {
+  background: #3e2723;
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5c0b1e;
+}

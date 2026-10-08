@@ -1,0 +1,6 @@
+{
+  "name": "Evelyn & Felipe — Casamento Gótico Elegante",
+  "description": "Sistema de confirmação de presença (RSVP) e seleção de menu para o casamento gótico elegante e sofisticado de Felipe e Evelyn, com integração Supabase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
